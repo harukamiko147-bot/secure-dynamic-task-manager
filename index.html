@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Dynamic Task Manager</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <h1>Secure Dynamic Task Manager</h1>
+
+      <section class="task-controls" aria-label="Add a task">
+        <label for="taskInput">New task</label>
+        <div class="input-row">
+          <input id="taskInput" type="text" placeholder="Enter a task" autocomplete="off" />
+          <button id="addTaskBtn" type="button">Add Task</button>
+          <button id="loadSamplesBtn" type="button">Load Sample Tasks</button>
+        </div>
+        <p id="taskMessage" role="alert" aria-live="polite"></p>
+      </section>
+
+      <section class="summary" aria-label="Task summary">
+        <p>Total Tasks: <strong id="totalCount">0</strong></p>
+        <p>Pending: <strong id="pendingCount">0</strong></p>
+        <p>Completed: <strong id="completedCount">0</strong></p>
+      </section>
+
+      <section aria-label="Task list">
+        <h2>Your Tasks</h2>
+        <ul id="taskList"></ul>
+      </section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
